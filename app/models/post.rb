@@ -40,6 +40,10 @@ class Post < ActiveRecord::Base
     validates :topic, presence: true
     validates :user, presence: true 
 
+  def voted(post)
+    self.votes.where(post_id: post.id).first
+  end
+   
    private
 
   # Who ever created a post, should automatically be set to "voting" it up.
