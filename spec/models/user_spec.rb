@@ -40,6 +40,8 @@ describe User do
       	users.first.comments_count.should eq(2)
       end
   end
+   
+
 
 end
 
